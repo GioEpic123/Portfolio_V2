@@ -50,10 +50,6 @@ body {
     color: rgb(211, 192, 171);
 }
 
-#alt-i {
-    display: none;
-}
-
 .title-card {
     font-size: 4vw;
     margin: 1em;
@@ -108,6 +104,10 @@ h2 {
     font-size: 4vw;
 }
 
+h2.alt-toast {
+    display: none;
+}
+
 .icon-grid-wrapper {
     height: 50vw;
     margin: 0.5em;
@@ -141,6 +141,10 @@ h2 {
     justify-self: center;
 }
 
+.icon-row {
+    display: none;
+}
+
 #project-gallery {
     background-color: rgba(211,192,171,1);
     color: #333;
@@ -150,6 +154,11 @@ h2 {
     align-content: space-between;
     height: auto;
     padding: 2%;
+}
+
+#project-gallery p{
+
+    font-size: 3vw;
 }
 
 h3 {
@@ -186,12 +195,16 @@ h3 {
 }
 
 .thumb-wrapper {
-    width: 100%;
+    width: 90%;
+    margin: auto;
     margin-bottom: 1em;
 }
 
 .thumbnail {
     width: 100%;
+    border-radius: 0.25em;
+        border: 0.1em solid rgba(211,192,171,1);
+        box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.95), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .project-link {
@@ -206,6 +219,12 @@ h3 {
     justify-content: space-between;
     align-content: flex-end;
 }
+
+#end-toast {
+    margin-left: 0em;
+    margin-top: 1em;
+}
+
 
 /*
     Start Making media Queries for Desktop, Will Do Tablet later
@@ -262,10 +281,6 @@ h3 {
     
     /*END OF HEADER*/
 
-    #alt-i {
-        display: inline;
-        margin-right: 0.25em;
-    }
     
     .title-card {
         font-size: 2.5vw;
@@ -287,6 +302,20 @@ h3 {
         height: auto;
         display: flex;
         justify-content: center;
+    }
+
+    .logo-wrapper {
+        max-height: 100%;
+        max-width: 40%;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+    }
+
+    .logo-container {
+        height: auto;
+        max-width: 20%;
+        align-self: center;
         
     }
 
@@ -294,22 +323,6 @@ h3 {
         max-width: 100%;
         filter: grayscale(100%);
         height: auto;
-    
-    }
-    
-    .logo-container {
-        height: auto;
-        max-width: 20%;
-        align-self: center;
-        
-    }
-    
-    .logo-wrapper {
-        max-height: 100%;
-        max-width: 60%;
-        display: flex;
-        justify-content: space-around;
-        align-content: center;
     }
 
     h1{
@@ -319,17 +332,21 @@ h3 {
     }
     
     h2 {
-        margin: auto;
-        width: 50%;
-        font-size: 3vw;
+        display: none;
     }
     
-    
-    
-    
+    h2.alt-toast {
+        display: block;
+        font-size: 2vw;
+        margin: auto;
+        width: 90%;
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
     
     .icon-grid-wrapper {
-        height: 50vw;
+        /* height: 50vw;
         margin: 0.5em;
         margin-right: 0;
      
@@ -337,53 +354,62 @@ h3 {
     
         position: relative;
         justify-self: center;
-        margin-bottom: 1em;
-    
+        margin-bottom: 1em; */
+        display: none;
     }
-    
-    .icon-grid {
-        display: grid;
-        grid-template-columns: 30% 30% 30%;
-        grid-template-rows: 30% 30% 30%;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        align-content: center;
-    }
-    
-    .icon-grid i {
-       
-        height: 3em;
-        filter: grayscale(100%);
+
+    .icon-row{
+        margin: 1em;
+        display: flex;
+        font-size: 4vw;
+        justify-content: space-between;
         height: auto;
-        align-self: center;
-        justify-self: center;
     }
+
+    .icon-row i {
+        max-height: auto;
+        filter: grayscale(100%);
+    } 
     
     #project-gallery {
-        background-color: rgba(211,192,171,1);
-        color: #333;
+        border-radius: 3em;
+        box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.95), 0 10px 30px 0 rgba(0, 0, 0, 0.19);
        
-        border-radius: 1em;
-        box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.934), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
-        align-content: space-between;
+        width: 90%;
+        margin: auto;
         height: auto;
-        padding: 2%;
+        padding: 1%;
+        margin-bottom: 5%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+
+    #project-gallery .title-card{
+        font-size: 1.8vw;
+        width: 100%;
+        margin-top: 1em;
+      
+        align-self: flex-start;
+    }
+    
+    #project-gallery p{
+
+        font-size: 1.5vw;
     }
     
     h3 {
-        font-size: 9vw;
+        font-size: 3vw;
         border-style: solid ;
         border-radius: 0.2em;
+        width: 80%;
+        margin: auto;
         
-    
-        /**/
         background-color: rgba(211,192,171,1);
         color: rgb(51,51,51);
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.95), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
-    
-        /**/
        
         margin-bottom: 1em;
         padding: 0.5em;
@@ -395,36 +421,55 @@ h3 {
         box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.95), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
         border-radius: 0.5em;
-        margin: 5%;
+        margin: 0.5em;
         height: auto;
-        width: auto;
-        padding: 5%;
-        
-        
+        width: 40%;
+        padding: 2%;    
         font-size: 5vw;
         text-align: center;
     }
     
     .thumb-wrapper {
         width: 100%;
-        margin-bottom: 1em;
+        height: auto;
+        margin-bottom: 0em;
+        margin: auto;
+        
     }
     
     .thumbnail {
-        width: 100%;
+        width: 90%;
+        border-radius: 0.25em;
+        border: 0.05em solid rgba(211,192,171,1);
+        box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.95), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     
     .project-link {
         color: #cc642f;
+        font-size: 2.5vw;
     }
     
     .footer {
-        font-size: 4vw;
+        /* font-size: 4vw;
         width: 90%;
         margin: 1em;
         display: flex;
         justify-content: space-between;
-        align-content: flex-end;
+        align-content: flex-end; */
+        font-size: 1.5vw;
+        width: 90%;
+        height: auto;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-content: space-around;
+    }
+
+    #end-toast {
+        display: block;
+        margin-left: 0em;
+        margin-top: 1em;
+        margin-bottom: 1em;;
     }
 
 }
